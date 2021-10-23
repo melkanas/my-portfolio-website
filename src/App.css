@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/* svg * {
+  transform-box: fill-box;
+}
+.a1letter {
+  stroke-dashoffset: 141;
+  stroke-dasharray: 141;
+  stroke: #23a3d0;
+  fill: transparent;
+  stroke-width: 2px;
+  animation: a1_write 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes a1_write {
+  0% {
+    stroke-dashoffset: -141;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+    stroke-width: 2px;
+  }
+  100% {
+    fill: #23a3d0;
+    stroke-width: 0px;
+  }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes st2_fill {
+  0% {
+    fill: transparent;
+    stroke-width: 2px;
+  }
+  100% {
+    fill: #23a3d0;
+    stroke-width: 0px;
+  }
+}
+svg:hover {
+  cursor: pointer;
+  .st0 {
+    transform: translate(-100%, 0%);
+  }
+  .st1 {
+    transform: translate(50%, 0%);
+  }
+  .a1letter,
+  .a2letter,
+  .nletter,
+  .sletter {
+    transform: translate(-60px, 0%);
+  }
+  .nletter,
+  .a2letter,
+  .sletter {
+    opacity: 1;
+    fill: #23a3d0;
+  }
+  .nletter {
+    stroke-dashoffset: 128;
+    stroke-dasharray: 128;
+    stroke: #23a3d0;
+    fill: transparent;
+    stroke-width: 2px;
+    animation: a1_write 2s;
+    animation-fill-mode: forwards;
+  }
+  .a2letter {
+    stroke-dashoffset: 141;
+    stroke-dasharray: 141;
+    stroke: #23a3d0;
+    fill: transparent;
+    stroke-width: 2px;
+    animation: a1_write 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
+  .sletter {
+    stroke-dashoffset: 82;
+    stroke-dasharray: 82;
+    stroke: #23a3d0;
+    fill: transparent;
+    stroke-width: 2px;
+    animation: a1_write 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.a1letter,
+.st1,
+.st2 {
+  transition: all 1s;
 }
 
-.App-link {
-  color: #61dafb;
+.nletter,
+.a2letter,
+.sletter {
+  opacity: 0;
+  transition: all 2s;
+} */
+
+.Typist .Cursor {
+  display: inline-block;
+}
+.Typist .Cursor--blinking {
+  opacity: 1;
+  animation: blink 1s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
