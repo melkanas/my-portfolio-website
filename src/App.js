@@ -1,4 +1,7 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
+
 import "@fontsource/roboto";
 import { useState, useEffect, memo, lazy, Suspense } from "react";
 import {
@@ -69,7 +72,22 @@ const theme = responsiveFontSizes(
     },
 
     overrides: {
-      // Style sheet name ⚛️
+      // Style sheet name
+      MuiOutlinedInput: {
+        root: {
+          color: "#fff",
+        },
+      },
+      MuiInputLabel: {
+        root: {
+          color: "#fff",
+        },
+      },
+      MuiInput: {
+        root: {
+          color: "#fff",
+        },
+      },
       MuiButton: {
         // Name of the rule
         text: {
@@ -113,7 +131,7 @@ const theme = responsiveFontSizes(
 const useStyles = makeStyles({
   bottomNav: {
     position: "fixed",
-    bottom: 10,
+    bottom: 5,
   },
   topNav: {
     marginLeft: "auto",

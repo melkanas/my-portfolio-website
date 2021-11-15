@@ -1,7 +1,7 @@
 import { Grid, makeStyles, Typography, Link, Tooltip } from "@material-ui/core";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import useMeasure from "react-use-measure";
-
+import { useDrawSVG } from "./utils";
 import {
   FaNodeJs,
   FaHtml5,
@@ -73,32 +73,12 @@ const useStylesBootstrap = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.black,
   },
 }));
-const About = () => {
-  const iconsRef = useRef(null);
-  const [iconsLength, setIconsLength] = useState([]);
-  const tooltipClass = useStylesBootstrap();
-  useEffect(() => {
-    if (iconsRef.current)
-      setIconsLength(
-        [...iconsRef.current.getElementsByTagName("path")].map((elt) =>
-          elt.getTotalLength()
-        )
-      );
-  }, [iconsRef.current, setIconsLength]);
-  const classes = useStyles();
-  const [springs, api] = useSprings(iconsLength.length, (index) => ({
-    fill: "transparent",
-    from: {
-      strokeDashoffset: 0,
-    },
-    strokeDashoffset: iconsLength[index],
-    strokeDasharray: iconsLength[index],
-    config: { ...config.molasses },
-    reverse: true,
-    scale: 1,
-    delay: 800,
-  }));
+//hook to animate drawing of svg
 
+const About = () => {
+  const tooltipClass = useStylesBootstrap();
+  const classes = useStyles();
+  const [iconsRef, springs, api] = useDrawSVG();
   let faIcons = [
     { icon: FaNodeJs, link: "https://nodejs.org", name: "NodeJS" },
     { icon: FaHtml5, link: "https://www.w3schools.com/html/", name: "HTML5" },
