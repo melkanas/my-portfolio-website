@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     color: "#fff",
     position: "absolute",
-    paddingLeft: "100px",
+    paddingLeft: "10px",
     width: "100vw",
     height: "100vh",
     padding: 8,

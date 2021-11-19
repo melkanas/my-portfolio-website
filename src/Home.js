@@ -2,10 +2,11 @@ import { Grid, Typography, makeStyles, Button } from "@material-ui/core";
 import { memo } from "react";
 import Typist from "react-typist";
 import Logo from "./Logo";
+import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   container: {
     color: "#fff",
-    paddingLeft: "100px",
+    paddingLeft: "10px",
     height: "100vh",
     position: "absolute",
   },
@@ -49,10 +50,15 @@ const Home = () => {
             I create web apps to make business better
           </Typist>
         </Typography>
-
-        <Button variant="outlined" color="primary" className={classes.contact}>
-          Get in Touch
-        </Button>
+        <Link to="/contact" style={{ textDecoration: "none" }}>
+          <Button
+            variant="outlined"
+            color="primary"
+            className={classes.contact}
+          >
+            Get in Touch
+          </Button>
+        </Link>
       </Grid>
     </Grid>
   );

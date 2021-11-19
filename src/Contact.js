@@ -4,7 +4,6 @@ import Icon from "@material-ui/core/Icon";
 import SendIcon from "@material-ui/icons/Send";
 import { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
-import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -43,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     position: "absolute",
     width: "100vw",
-    paddingLeft: "100px",
+    paddingLeft: "10px",
     height: "100vh",
     paddingTop: 60,
   },
@@ -72,7 +71,6 @@ const Contact = () => {
   });
   const form = useRef();
   const [sentStatus, setSentStatus] = useState("idle");
-  console.log({ sentStatus });
   const classes = useStyles({ sentStatus });
   const handleChange = (event) => {
     setContact((prevContact) => ({
@@ -149,7 +147,7 @@ const Contact = () => {
               value={contact.subject}
               onChange={handleChange}
               multiline
-              style={{ width: 400 }}
+              style={{ width: 300 }}
               autoComplete={"off"}
             />
           </Grid>
@@ -162,7 +160,7 @@ const Contact = () => {
               onChange={handleChange}
               multiline
               minRows={8}
-              style={{ width: 400 }}
+              style={{ width: 300 }}
               autoComplete={"off"}
             />
           </Grid>

@@ -36,7 +36,7 @@ import {
 } from "react-spring";
 const useStyles = makeStyles({
   container: {
-    paddingLeft: "100px",
+    paddingLeft: "10px",
     height: "100vh",
     position: "absolute",
     width: "100vw",
