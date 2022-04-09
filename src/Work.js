@@ -64,6 +64,28 @@ const Work = () => {
               </Typography>
             </div>
             <div>
+              <Typography variant="h5">Asset Management & Treasury Dashboard</Typography>
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=8nI6AYF5uJ8"
+                loop={true}
+                width={"100%"}
+                controls={true}
+              />
+              <Typography variant="h5">Project Description</Typography>
+              <Typography variant="body1">
+                Dashboard for managing treasury and portfolios for a bank in real time. project
+                includes :
+                <ul>
+                  <li>
+                    Database modeling and implementation in SQL Server 
+                  </li>
+                  <li> Server implemented in nodejs, express and socket io</li>
+                  <li> frontend with react and redux store </li>
+                  <li> charts with Recharts </li>
+                </ul>
+              </Typography>
+            </div>
+            <div>
               <Typography variant="h5">Restaurant Landing page</Typography>
 
               <ReactPlayer
